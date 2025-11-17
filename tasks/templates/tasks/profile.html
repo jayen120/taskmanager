@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4"><i class="bi bi-person-circle"></i> User Profile</h2>
+
+    <!-- User Info -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h5 class="card-title">{{ user.username }}</h5>
+            <p class="card-text">Email: {{ user.email }}</p>
+        </div>
+    </div>
+
+    <!-- Task Stats -->
+    <h4 class="mb-3">Task Statistics</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-center border-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total Tasks</h5>
+                    <p class="display-6 text-primary">{{ total_tasks }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center border-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Completed</h5>
+                    <p class="display-6 text-success">{{ completed_tasks }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center border-warning mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Pending</h5>
+                    <p class="display-6 text-warning">{{ pending_tasks }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
